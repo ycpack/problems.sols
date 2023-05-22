@@ -1,0 +1,21 @@
+ //PRINTING THE FIBBONACCI  NUMBER//
+    public  static void fibb( int n){
+        int t1=0;
+        int t2=1;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(t1 + " ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+
+
+           // PRINTING Nth fibbonachi number//
+    public static int fibbb(int n){
+        if (n==0) return 0;
+        if (n==1) return 1;
+        return (fibbb(n-1)+fibbb(n-2));
+    }
