@@ -1,0 +1,8 @@
+ public static int counttotalsetBits(int n){
+        int total =0;
+        for (int i=1; i<=n; i++) {
+            total = total + setBits(i);
+        }
+        return total;
+
+    }
