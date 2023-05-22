@@ -1,0 +1,11 @@
+        int temp=x;
+        int sum=0;
+        while(temp!=0){
+            int ld = temp%10;
+            sum= sum+(ld*ld*ld);
+            temp=temp/10;
+
+        }
+        if(sum==x) return true;
+        else return false;
+    }
