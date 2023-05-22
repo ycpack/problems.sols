@@ -1,0 +1,6 @@
+public static void iskthbitset(int n, int k){
+        int x=(n>>(k-1));
+        if((x&1)!=0)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
