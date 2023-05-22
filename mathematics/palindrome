@@ -1,0 +1,23 @@
+// for numbers
+
+static boolean ispal(int x){
+        int rev=0;
+        int temp= x;
+        while (temp!=0){
+           int ld = temp % 10;
+           rev = rev* 10 + ld;
+           temp = temp/10;
+        }
+        return rev==x;
+        
+        //string
+        
+         int len = str.length();
+
+        for (int i = 0; i < len / 2; i++) {
+            if (str.charAt(i) != str.charAt(len - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;
