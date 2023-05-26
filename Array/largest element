@@ -1,0 +1,18 @@
+public static int largestNumber(int arr[]) {
+        int res = 0;
+
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > res) {
+                res=arr[i];
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {1, 4, 1222, 19, 25};
+        System.out.println(largestNumber(arr));
+
+
+    }
