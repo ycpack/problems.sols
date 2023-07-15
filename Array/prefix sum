@@ -1,0 +1,7 @@
+ public static int getSumprefix(int p[], int l, int r) {
+        if (l != 0)
+            return p[r] - p[l - 1];
+        else
+            return p[r];
+
+    }
