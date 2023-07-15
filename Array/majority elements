@@ -1,0 +1,22 @@
+  public static int majorityElement(int[] a, int size){
+
+        int res = a[0], count =1;
+        for(int i=0; i<size; i++){
+            if(a[i]==res)
+                count++;
+            else
+                count--;
+            if(count==0){
+                res=a[i]; count=1;
+            }
+        }
+        count=0;
+        for(int i=0; i<size; i++)
+            if (res == a[i]) {
+                count++;
+            }
+       if( count<=size/2  )
+           res=-1;
+      return res;
+
+    }
