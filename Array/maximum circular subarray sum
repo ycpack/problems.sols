@@ -1,0 +1,22 @@
+public static int normalMAxSum(int arr[]){
+        int res= arr[0];
+        int maxxEnding=arr[0];
+        for(int i=1; i<arr.length; i++){
+            maxxEnding=Math.max(maxxEnding+arr[i], arr[i]);
+            res=Math.max(res,maxxEnding);
+        }
+        return res;
+    }
+   static int overallMAxSum(int arr[]){
+        int max_normal= normalMAxSum(arr);
+        if(max_normal<0){
+            return max_normal;
+        }
+        int sum_arr=0;
+        for(int i=0; i<arr.length; i++){
+            sum_arr = sum_arr+ arr[i];
+            arr[i]=-arr[i];
+        }
+        int max_circular=sum_arr+normalMAxSum(arr);
+        return Math.max(max_normal,max_circular);
+    }
